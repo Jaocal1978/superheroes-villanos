@@ -15,7 +15,7 @@ $(document).ready(function()
     });
 });
 
-function datos(data)
+datos = (data) =>
 { 
     let id;
     let nombre;
@@ -44,23 +44,6 @@ function datos(data)
                 /*--Informacion General--*/
                 id = data.results[i].id;
                 nombre = data.results[i].name;
-                imagen = data.results[i].image.url;
-                trabajo = data.results[i].work.occupation;
-                altura = data.results[i].appearance.height[1];
-                peso = data.results[i].appearance.weight[1];
-                genero = data.results[i].appearance.gender;
-                alias = data.results[i].biography.aliases[0];
-                alineacion = data.results[i].biography.alignment;
-                comic = data.results[i].biography.publisher;
-
-                /*-estadísticas de potencia-*/
-                combate = data.results[i].powerstats.combat;
-                durabilidad = data.results[i].powerstats.durability;
-                inteligencia = data.results[i].powerstats.intelligence;
-                fuerza = data.results[i].powerstats.power;
-                velocidad = data.results[i].powerstats.speed;
-                fortaleza = data.results[i].powerstats.strength;
-
                 listaSHV += `
                     <div class="col-12 col-md-6 col-xl-4">
                         <div class="alert alert-info text-center" role="alert">
@@ -142,7 +125,7 @@ function datos(data)
     }
 }
 
-function ajax(url)
+ajax = (url) =>
 {
     $.ajax({
         url : ""+url+"",
@@ -202,8 +185,7 @@ function ajax(url)
     });
 }
 
-
-function seleccion(letnum)
+seleccion = (letnum) =>
 {
     let urlFunction;
        
@@ -223,8 +205,7 @@ function seleccion(letnum)
     return urlFunction;
 }
 
-
-function fntIdSelect(id)
+fntIdSelect = (id) =>
 {
     let idSel = id;
     let url = seleccion(idSel);
