@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    color: red;
+}
+
+#img-sph
+{
+    width: 100%;
+    height: 400px;
+}
+
+#grafico
+{
+    height: 600px;
+}
+
+#carta
+{
+    height: auto !important;
+}
+
+#carta img
+{
+    height: 400px;
+}
+
+footer
+{
+    background: #2c3df5;
+    color: #ffffff;
+}
