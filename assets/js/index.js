@@ -191,13 +191,13 @@ seleccion = (letnum) =>
        
     if($.isNumeric(letnum))
     {
-        heroId = letnum;
+        let heroId = letnum;
         urlFunction= `https://superheroapi.com/api.php/10230872184043731/${heroId}`;
         
     }
     else
     {
-        heroName = letnum;
+        let heroName = letnum;
         urlFunction = `https://superheroapi.com/api.php/10230872184043731/search/${heroName}`;
         $('#response').addClass('d-none');
     }
